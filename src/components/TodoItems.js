@@ -1,9 +1,9 @@
-import React, { useRef } from "react";
 import { motion } from "framer-motion";
+import React, { useRef } from "react";
 import { AiFillEdit } from "react-icons/ai";
 import { IoCheckmarkDoneSharp, IoClose } from "react-icons/io5";
 
-export const TodoItems = () => {
+const TodoItems = (props) => {
 	const { item, updateTodo, removeTodo, completeTodo } = props;
 
 	const inputRef = useRef(true);
@@ -15,12 +15,11 @@ export const TodoItems = () => {
 
 	const update = (id, value, e) => {
 		if (e.which === 13) {
-			//13 => es la llave de entrada
+			//13 es la llave de entrada
 			updateTodo({ id, item: value });
 			inputRef.current.disabled = true;
 		}
 	};
-
 	return (
 		<motion.li
 			initial={{ x: "150vw", transition: { type: "spring", duration: 2 } }}
@@ -77,3 +76,5 @@ export const TodoItems = () => {
 		</motion.li>
 	);
 };
+
+export default TodoItems;

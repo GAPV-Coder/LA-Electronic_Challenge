@@ -69,7 +69,7 @@ const DisplayTodos = (props) => {
 								);
 						  })
 						: null}
-					{/* for completed items */}
+					{/* items completados */}
 					{props.todos.length > 0 && sort === "completed"
 						? props.todos.map((item) => {
 								return (
@@ -85,7 +85,7 @@ const DisplayTodos = (props) => {
 								);
 						  })
 						: null}
-					{/* for all items */}
+					{/* todos los items */}
 					{props.todos.length > 0 && sort === "all"
 						? props.todos.map((item) => {
 								return (
