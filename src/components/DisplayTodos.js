@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { TodoItems } from "./TodoItems";
+import TodoItems from "./TodoItems";
 import { AnimatePresence, motion } from "framer-motion";
 import {
 	addTodos,
